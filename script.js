@@ -5,27 +5,27 @@ function getComputerChoice() {
     let x = Math.floor(Math.random() * 3);
     switch (x) {
         case 0: 
-            return "ROCK"
+            return "ROCK";
         case 1:
-            return "SCISSORS"
+            return "SCISSORS";
         case 2: 
-            return "PAPER"  
+            return "PAPER";
         default:
-            return "error"  
+            return "error";
     }
 }
 
 function playRound(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
-        return
+        return;
     }
     else if ((computerChoice === "ROCK" && playerChoice == "SCISSORS") || 
         (computerChoice === "PAPER" && playerChoice == "ROCK") || 
         (computerChoice === "SCISSORS" && playerChoice == "PAPER")) {
-            computerScore++
-            return
+            computerScore++;
+            return;
     }
-    else playerScore++
+    else playerScore++;
 }
 
 function game() {
@@ -39,13 +39,13 @@ function game() {
         console.log(playerScore);
     }
     if (computerScore === playerScore) {
-        return "tie"
+        return "tie";
     }
     if (computerScore > playerScore) {
-        return "lose"
+        return "lose";
     }
     if (computerScore < playerScore) {
-        return "win"
+        return "win";
     }
 }
 
