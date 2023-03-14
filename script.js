@@ -1,5 +1,5 @@
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     let x = Math.floor(Math.random() * 3);
