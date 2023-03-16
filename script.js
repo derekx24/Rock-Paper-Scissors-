@@ -34,9 +34,6 @@ function game() {
         let playerChoice = prompt("Rock, Paper, or Scissors?");
         playerChoice = playerChoice.toUpperCase();
         playRound(computerChoice, playerChoice);
-        console.log(computerChoice);
-        console.log(playerChoice);
-        console.log(playerScore);
     }
     if (computerScore === playerScore) {
         return "tie";
