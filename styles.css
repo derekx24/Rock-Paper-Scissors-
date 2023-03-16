@@ -4,7 +4,8 @@
     font-family: optima, sans-serif;
 }
 
-.header {
+.header,
+.footer {
     display: flex;
     background-color: rgb(4, 35, 59);
     font-size: 42px;
@@ -12,6 +13,34 @@
     color: white;
     padding: 25px;
     justify-content: center;
+}
+
+.footer {
+    font-size: 32px;
+    font-weight: 100;
+}
+
+.scoreBoard {
+    display: flex;
+    justify-content: center;
+    background:rgb(11, 54, 86);
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    font-size: 26px;
+    margin: 30px;
+    background:rgb(170, 195, 213);
+    border-radius: 40px;
+}
+
+.choice {
+    font-size:64px;
+    padding: 30px;
 }
 
 .container {
@@ -26,14 +55,16 @@
 
 .button-container {
     display: flex;
+    flex: 1;     
 }
 
 .button-container button {
-    flex: 1;
+    display: flex;
     border: none;
     border-radius: 30px;
     margin: 30px;
     background: rgb(170, 195, 213);
+    gap: 30px;
 }
 
 button:hover {
