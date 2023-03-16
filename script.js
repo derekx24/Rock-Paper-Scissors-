@@ -5,45 +5,47 @@ function getComputerChoice() {
     let x = Math.floor(Math.random() * 3);
     switch (x) {
         case 0: 
-            return "ROCK";
+            return 'ROCK';
         case 1:
-            return "SCISSORS";
+            return 'SCISSORS';
         case 2: 
-            return "PAPER";
+            return 'PAPER';
         default:
-            return "error";
+            return 'error';
     }
 }
 
 function playRound(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
-        return;
+        console.log("tie");
     }
-    else if ((computerChoice === "ROCK" && playerChoice == "SCISSORS") || 
-        (computerChoice === "PAPER" && playerChoice == "ROCK") || 
-        (computerChoice === "SCISSORS" && playerChoice == "PAPER")) {
+    else if ((computerChoice === 'ROCK' && playerChoice == 'SCISSORS') || 
+        (computerChoice === 'PAPER' && playerChoice == 'ROCK') || 
+        (computerChoice === 'SCISSORS' && playerChoice == 'PAPER')) {
             computerScore++;
-            return;
     }
-    else playerScore++;
-}
-
-function game() {
-    for(let i = 0; i < 5; i++) {
-        let computerChoice = getComputerChoice();
-        let playerChoice = prompt("Rock, Paper, or Scissors?");
-        playerChoice = playerChoice.toUpperCase();
-        playRound(computerChoice, playerChoice);
-    }
-    if (computerScore === playerScore) {
-        return "tie";
-    }
-    if (computerScore > playerScore) {
-        return "lose";
-    }
-    if (computerScore < playerScore) {
-        return "win";
+    else {
+        playerScore++;
     }
 }
 
-console.log(game());
+function gameEnd() {
+    if (computerScore === 5) {
+        console.log('computer win');
+    } else {
+        console.log('player win');
+    }
+}
+
+function playGame(playerChoice) {
+    const computerChoice = getComputerChoice();
+    playRound(computerChoice, playerChoice);
+    
+    if ((computerScore > 4) || (playerScore > 4)) {
+        gameEnd();
+    }
+}
+
+rockButton.addEventListener('click', () => playGame('ROCK'));
+paperButton.addEventListener('click', () => playGame('PAPER'));
+scissorsButton.addEventListener('click', () => playGame('SCISSORS'));

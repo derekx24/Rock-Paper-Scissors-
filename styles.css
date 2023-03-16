@@ -29,11 +29,15 @@
 }
 
 .button-container button {
-    display: flex;
+    flex: 1;
     border: none;
     border-radius: 30px;
     margin: 30px;
-    background: rgb(34, 104, 157);
+    background: rgb(170, 195, 213);
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .icons {
