@@ -43,6 +43,13 @@
     padding: 30px;
 }
 
+.results {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background:rgb(11, 54, 86);
+}
+
 .container {
     display: flex;
     flex-direction: column;
