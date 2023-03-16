@@ -42,25 +42,31 @@ function gameEnd() {
 function updateChoices(computerChoice, playerChoice) {
     switch (computerChoice) {
         case 'ROCK':
-          playerC.textContent = '✊'
-          break
+            playerC.textContent = '✊';
+            break;
         case 'PAPER':
-          playerC.textContent = '✋'
-          break
+            playerC.textContent = '✋';
+            break;
         case 'SCISSORS':
-          playerC.textContent = '✌'
-          break
+            playerC.textContent = '✌';
+            break;
+        case '-':
+            playerC.textContent = '-';
+            break;
       }
       switch (playerChoice) {
         case 'ROCK':
-          computerC.textContent = '✊'
-          break
+            computerC.textContent = '✊';
+            break;
         case 'PAPER':
-          computerC.textContent = '✋'
-          break
+            computerC.textContent = '✋';
+            break;
         case 'SCISSORS':
-          computerC.textContent = '✌'
-          break
+            computerC.textContent = '✌';
+            break;
+        case '-':
+            computerC.textContent = '-';
+            break;
       }
 }
 
@@ -74,7 +80,7 @@ function updateRoundMessage(result, playerChoice, computerChoice) {
         roundResult.textContent = `Player's ${playerChoice.toLowerCase()} beats Computer's ${computerChoice.toLowerCase()}`;
     } else if (result === 'computer') {
         roundResult.textContent = `Computer's ${computerChoice.toLowerCase()} beats Player's ${playerChoice.toLowerCase()}`;
-    } else {
+    } else  {
         roundResult.textContent = `Tie! Both players played ${computerChoice.toLowerCase()}`;
     }
 }
@@ -94,6 +100,15 @@ function playGame(playerChoice) {
     }
 }
 
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    updateChoices('-','-');
+    updateScores();
+    roundResult.textContent = '-';
+}
+
 rockButton.addEventListener('click', () => playGame('ROCK'));
 paperButton.addEventListener('click', () => playGame('PAPER'));
 scissorsButton.addEventListener('click', () => playGame('SCISSORS'));
+resetButton.addEventListener('click', () => resetGame());

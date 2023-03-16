@@ -50,6 +50,21 @@
     background:rgb(11, 54, 86);
 }
 
+.reset {
+    text-align: center;
+    background-color: rgb(11, 54, 86);
+    padding: 15px;
+}
+
+button {
+    border: rgb(3, 23, 39);;
+    background-color: rgb(4, 75, 130);;
+    color:rgb(213, 216, 219);
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 15px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
