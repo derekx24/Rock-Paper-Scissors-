@@ -1,5 +1,6 @@
 # Rock-Paper-Scissors-
 
-Basic Rock Paper Scissors game against computer which randomly chooses. 5 rounds are played in each game.
+Basic Rock Paper Scissors game against computer which randomly chooses. 
 
-rock paper scissors icons taken from https://www.vecteezy.com/
+First to five round wins will win the game, and the winner will be anounced.
+User can play as many games as they want, using the reset button to start another game.
